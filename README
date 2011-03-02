@@ -5,3 +5,6 @@ GIT: https://github.com/ChrisYip/Better-CSS-Syntax-for-Vim
 What's differences with built-in CSS syntax in Vim:
     1. Support most of HTML & CSS properties, including HTML5 & CSS3.
     2. Different highlight colors for properties, value, units and so on.
+
+Sorry for providing incorrect files on previous versions.
+Thanks for Keith Pickett to this feedback.
