@@ -3,7 +3,7 @@
 " Maintainer:   Chris Yip <chrisyipw@gmail.com>, twitter: @chrisyipw
 " URL:  http://www.vim.org/scripts/script.php?script_id=3220
 " GIT:  http://github.com/ChrisYis/Better-CSS-Syntax-for-Vim
-" Last Update:  2012/5/29
+" Last Update:  2012/11/17
 " Full CSS2, most of HTML5 & CSS3 properties (include prefix like -moz-) supported
 
 " Quit when a syntax file was already loaded
@@ -164,7 +164,9 @@ syn match cssColor /#\(\x\{6\}\|\x\{3\}\)/ contained
 
 syn match cssImportant /!important\>/ contained
 
-syn region cssComment start=/\/\*/ end=/\*\// contains=@Spell
+syn keyword cssTodo         contained TODO FIXME XXX
+
+syn region cssComment start=/\/\*/ end=/\*\// contains=cssTodo,@Spell
 
 syn region cssFunction start=/\c[-a-z0-9@]*(/ end=/)/ contained contains=cssPathFn,cssAttValFn
 
@@ -236,6 +238,8 @@ HLink cssString String
 HLink cssTagName Statement
 
 HLink cssURL String
+
+HLink cssTodo Todo
 
 delcommand HLink
 
